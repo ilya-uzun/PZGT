@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QMovie
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -111,7 +112,8 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Паскаль"))
         self.comboBox_2.setItemText(2, _translate("MainWindow", "bar"))
         self.comboBox_2.setItemText(3, _translate("MainWindow", "атм"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.unit_converter), _translate("MainWindow", "Конвертер единиц"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.unit_converter),
+                                  _translate("MainWindow", "Конвертер единиц"))
 
     # Start Animation
     def startAnimation(self):
