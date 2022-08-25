@@ -9,13 +9,12 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QMovie
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(600, 400)
+        MainWindow.resize(697, 771)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
@@ -26,34 +25,113 @@ class Ui_MainWindow(object):
         self.centralwidget.setFont(font)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 591, 401))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 691, 761))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
         self.tabWidget.setFont(font)
         self.tabWidget.setTabPosition(QtWidgets.QTabWidget.North)
         self.tabWidget.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.tabWidget.setIconSize(QtCore.QSize(20, 20))
         self.tabWidget.setObjectName("tabWidget")
         self.scheme = QtWidgets.QWidget()
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.scheme.setFont(font)
         self.scheme.setObjectName("scheme")
+        self.pushButtonStop = QtWidgets.QPushButton(self.scheme)
+        self.pushButtonStop.setGeometry(QtCore.QRect(350, 620, 100, 50))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        # Кнопка стоп
+        self.pushButtonStop.setFont(font)
+        self.pushButtonStop.setObjectName("pushButtonStop")
+        self.pushButtonStop.setStyleSheet("""
+        QPushButton{
+            font-style: oblique;
+            font-weight: bold;
+            border: 1px solid #f21d1d;
+            border-radius: 15px;
+            color: #f21d1d;
+            background-color: #fff;
+        }
+        """)
+        self.pushButtonStart = QtWidgets.QPushButton(self.scheme)
+        self.pushButtonStart.setGeometry(QtCore.QRect(200, 620, 100, 50))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        # Кнопка старт
+        self.pushButtonStart.setFont(font)
+        self.pushButtonStart.setObjectName("pushButtonStart")
+        self.pushButtonStart.setStyleSheet("""
+        QPushButton{
+            font-style: oblique;
+            font-weight: bold;
+            border: 1px solid #1DA1F2;
+            border-radius: 15px;
+            color: #1DA1F2;
+            background-color: #fff;
+        }
+        """)
 
+        self.labelFon = QtWidgets.QLabel(self.scheme)
+        self.labelFon.setGeometry(QtCore.QRect(80, 30, 521, 571))
+        self.labelFon.setText("")
+        self.labelFon.setPixmap(QtGui.QPixmap("img/photo1661402333.jpeg"))
+        self.labelFon.setObjectName("labelFon")
+        self.lineEditRecirculationg = QtWidgets.QLineEdit(self.scheme)
+        self.lineEditRecirculationg.setGeometry(QtCore.QRect(120, 370, 80, 20))
+        self.lineEditRecirculationg.setObjectName("lineEditRecirculationg")
+        self.lineEditFlowmeter = QtWidgets.QLineEdit(self.scheme)
+        self.lineEditFlowmeter.setGeometry(QtCore.QRect(450, 330, 80, 20))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.lineEditFlowmeter.setFont(font)
+        self.lineEditFlowmeter.setObjectName("lineEditFlowmeter")
         self.label_2 = QtWidgets.QLabel(self.scheme)
-        self.label_2.setGeometry(QtCore.QRect(350, 190, 91, 91))
-        self.label_2.setText("")
+        self.label_2.setGeometry(QtCore.QRect(120, 400, 81, 16))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
-        #
-        self.movie = QMovie("img/gif/alarm_exclamation_red_reversing.gif")
-        self.label_2.setMovie(self.movie)
-        self.startAnimation()
-
-        self.pushButton = QtWidgets.QPushButton(self.scheme)
-        self.pushButton.setGeometry(QtCore.QRect(130, 240, 131, 41))
-        self.pushButton.setObjectName("pushButton")
+        self.label_3 = QtWidgets.QLabel(self.scheme)
+        self.label_3.setGeometry(QtCore.QRect(110, 410, 101, 31))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.scheme)
+        self.label_4.setGeometry(QtCore.QRect(450, 350, 121, 31))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.labelValveWater = QtWidgets.QLabel(self.scheme)
+        self.labelValveWater.setGeometry(QtCore.QRect(440, 230, 47, 13))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.labelValveWater.setFont(font)
+        self.labelValveWater.setObjectName("labelValveWater")
+        self.labelValveCement = QtWidgets.QLabel(self.scheme)
+        self.labelValveCement.setGeometry(QtCore.QRect(370, 180, 47, 13))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.labelValveCement.setFont(font)
+        self.labelValveCement.setObjectName("labelValveCement")
         self.tabWidget.addTab(self.scheme, "")
         self.unit_converter = QtWidgets.QWidget()
         self.unit_converter.setObjectName("unit_converter")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.unit_converter)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(110, 20, 361, 51))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(150, 20, 361, 51))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -73,22 +151,22 @@ class Ui_MainWindow(object):
         self.comboBox_2.addItem("")
         self.horizontalLayout.addWidget(self.comboBox_2)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.unit_converter)
-        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(110, 120, 361, 73))
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(150, 110, 361, 73))
         self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.textEdit_2 = QtWidgets.QTextEdit(self.horizontalLayoutWidget_2)
-        self.textEdit_2.setObjectName("textEdit_2")
-        self.horizontalLayout_2.addWidget(self.textEdit_2)
+        self.lineEditConversionLeft = QtWidgets.QLineEdit(self.horizontalLayoutWidget_2)
+        self.lineEditConversionLeft.setObjectName("lineEditConversionLeft")
+        self.horizontalLayout_2.addWidget(self.lineEditConversionLeft)
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("img/equals.png"))
+        self.label.setPixmap(QtGui.QPixmap("/img/equals.png"))
         self.label.setObjectName("label")
         self.horizontalLayout_2.addWidget(self.label)
-        self.textEdit = QtWidgets.QTextEdit(self.horizontalLayoutWidget_2)
-        self.textEdit.setObjectName("textEdit")
-        self.horizontalLayout_2.addWidget(self.textEdit)
+        self.lineEditConversionRiqht = QtWidgets.QLineEdit(self.horizontalLayoutWidget_2)
+        self.lineEditConversionRiqht.setObjectName("lineEditConversionRiqht")
+        self.horizontalLayout_2.addWidget(self.lineEditConversionRiqht)
         self.tabWidget.addTab(self.unit_converter, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -101,8 +179,14 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Эмулятор смешивания тампонажного раствора"))
+        self.pushButtonStop.setText(_translate("MainWindow", "Стоп"))
+        self.pushButtonStart.setText(_translate("MainWindow", "Пуск"))
+        self.label_2.setText(_translate("MainWindow", "Плотномер"))
+        self.label_3.setText(_translate("MainWindow", "рециркуляции"))
+        self.label_4.setText(_translate("MainWindow", "Расходомер воды"))
+        self.labelValveWater.setText(_translate("MainWindow", "Вода: "))
+        self.labelValveCement.setText(_translate("MainWindow", "Цемент: "))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.scheme), _translate("MainWindow", "Схема"))
         self.comboBox.setItemText(0, _translate("MainWindow", "psi"))
         self.comboBox.setItemText(1, _translate("MainWindow", "Паскаль"))
@@ -114,11 +198,3 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(3, _translate("MainWindow", "атм"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.unit_converter),
                                   _translate("MainWindow", "Конвертер единиц"))
-
-    # Start Animation
-    def startAnimation(self):
-        self.movie.start()
-
-    # Stop Animation(According to need)
-    def stopAnimation(self):
-        self.movie.stop()
