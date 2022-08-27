@@ -1,7 +1,4 @@
-import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.Qt import *
-
 
 class TabPage_SO(QWidget):
     def __init__(self, parent=None):

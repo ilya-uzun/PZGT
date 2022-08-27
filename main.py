@@ -17,11 +17,4 @@ if __name__ == "__main__":
     mw = MainWindow()
     mw.show()
 
-    #mw.lineEditConversionRiqht.setText('ds') # gпример вызова напрямую
-
-    # MainWindow = QtWidgets.QMainWindow()
-    # ui = Ui_MainWindow()
-    # ui.setupUi(MainWindow)
-    # MainWindow.show()
-
     sys.exit(app.exec_())
