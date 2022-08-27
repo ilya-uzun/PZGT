@@ -128,6 +128,7 @@ class Ui_MainWindow(object):
         self.labelValveCement.setFont(font)
         self.labelValveCement.setObjectName("labelValveCement")
         self.tabWidget.addTab(self.scheme, "")
+        # Вкладка конвертер
         self.unit_converter = QtWidgets.QWidget()
         self.unit_converter.setObjectName("unit_converter")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.unit_converter)
@@ -161,7 +162,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.lineEditConversionLeft)
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("/img/equals.png"))
+        self.label.setPixmap(QtGui.QPixmap("img/equals.png"))
         self.label.setObjectName("label")
         self.horizontalLayout_2.addWidget(self.label)
         self.lineEditConversionRiqht = QtWidgets.QLineEdit(self.horizontalLayoutWidget_2)
