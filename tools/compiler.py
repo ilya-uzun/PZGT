@@ -1,6 +1,5 @@
 from data.dataCompiler import DadaCompiler
 from UI.ui import *
-from PyQt5.QtWidgets import QLineEdit
 
 
 def psi_in_Pa(num: str):
@@ -16,3 +15,4 @@ class Compiler(Ui_MainWindow):
 
     def onChanged(self, text):
         self.lineEditConversionRiqht.setText(psi_in_Pa(text))
+
