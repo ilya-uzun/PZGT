@@ -7,6 +7,12 @@ class Compiler:
         return 'test'
 
     def psi_in_Pa(self, left: str):
+        print(left)
+        print(type(left))
+
+        # x = float(left)
+        # print(x)
+        # print(type(x))
         return str(float(left) * DadaCompiler.PSI_IN_PA)
 
 

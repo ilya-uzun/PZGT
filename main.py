@@ -1,6 +1,5 @@
-import sys
-
-from PyQt5.QtGui import QDoubleValidator
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QDoubleValidator, QRegExpValidator
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from tools.compiler import Compiler
 from UI.ui import *
@@ -22,7 +21,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
     def lineEditLeft(self):
-        self.onlyDouble = QDoubleValidator()
+        #self.onlyDouble = QRegExpValidator(QRegExp(r'[0-9].+'))
+        self.onlyDouble = QDoubleValidator(-99.99, 99.99, 2, self.lineEditConversionLeft)
         self.lineEditConversionLeft.setValidator(self.onlyDouble)
         self.lineEditConversionLeft.editingFinished.connect(self.onChanged)
 
@@ -32,6 +32,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 if __name__ == "__main__":
+    import sys
     app = QApplication(sys.argv)
     mw = MainWindow()
     mw.show()
