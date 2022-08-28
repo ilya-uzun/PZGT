@@ -1,7 +1,11 @@
 import sys
+
+from PyQt5.QtGui import QDoubleValidator
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from tools.compiler import Compiler
 from UI.ui import *
+
+
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -16,9 +20,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lineEditLeft()
         self.compoler = Compiler()
 
+
     def lineEditLeft(self):
-        if self.lineEditConversionLeft.text() == None:
-            self.lineEditConversionLeft.editingFinished.connect(self.onChanged)
+        self.onlyDouble = QDoubleValidator()
+        self.lineEditConversionLeft.setValidator(self.onlyDouble)
+        self.lineEditConversionLeft.editingFinished.connect(self.onChanged)
 
 
     def onChanged(self):
