@@ -3,7 +3,7 @@ from PyQt5.QtGui import QDoubleValidator, QRegExpValidator
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from tools.compiler import Compiler
 from UI.ui import *
-
+from loguru import logger
 
 
 
@@ -37,3 +37,5 @@ if __name__ == "__main__":
     mw = MainWindow()
     mw.show()
     sys.exit(app.exec_())
+
+
